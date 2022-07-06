@@ -7,10 +7,10 @@ public class QuestionDisplay : MonoBehaviour
 {
     [Header("UI Elements")]
     public GameObject screenQuestion;
-    public GameObject answerA;
-    public GameObject answerB;
-    public GameObject answerC;
-    public GameObject answerD;
+    public GameObject answerABtnText;
+    public GameObject answerBBtnText;
+    public GameObject answerCBtnText;
+    public GameObject answerDBtnText;
 
     public static string newQuestion;
     public static string newA;
@@ -35,9 +35,9 @@ public class QuestionDisplay : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         screenQuestion.GetComponent<Text>().text = newQuestion;
-        answerA.GetComponent<Text>().text = newA;
-        answerB.GetComponent<Text>().text = newB;
-        answerC.GetComponent<Text>().text = newC;
-        answerD.GetComponent<Text>().text = newC;
+        answerABtnText.GetComponent<Text>().text = newA;
+        answerBBtnText.GetComponent<Text>().text = newB;
+        answerCBtnText.GetComponent<Text>().text = newC;
+        answerDBtnText.GetComponent<Text>().text = newC;
     }
 }
