@@ -5,26 +5,21 @@ using UnityEngine;
 public class QuestionGenerator : MonoBehaviour
 {
     public static string actualAnswer;
-    bool displayingQuestion = false;
+    public static bool displayingQuestion = false;
     int questionNumber;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public GameObject visual001;
 
     // Update is called once per frame
     void Update()
     {
         if (!displayingQuestion)
         {
-            questionNumber = Random.Range(1, 6);
-            Debug.Log(questionNumber);
+            displayingQuestion = true;
+            questionNumber = Random.Range(1, 7);
+            //Debug.Log(questionNumber);
 
             if (questionNumber == 1)
             {
-                displayingQuestion = true;
                 QuestionDisplay.newQuestion = "How much wood could a wood chuck chuck if a wood chuck could chuck wood?";
                 QuestionDisplay.newA = "A. Lots and Lots";
                 QuestionDisplay.newB = "B. None";
@@ -34,7 +29,6 @@ public class QuestionGenerator : MonoBehaviour
             }
             if (questionNumber == 2)
             {
-                displayingQuestion = true;
                 QuestionDisplay.newQuestion = "Who invented the bulb?";
                 QuestionDisplay.newA = "A. Enistein";
                 QuestionDisplay.newB = "B. Newton";
@@ -44,7 +38,6 @@ public class QuestionGenerator : MonoBehaviour
             }
             if (questionNumber == 3)
             {
-                displayingQuestion = true;
                 QuestionDisplay.newQuestion = "Where is Japan?";
                 QuestionDisplay.newA = "A. Africa";
                 QuestionDisplay.newB = "B. Asia";
@@ -54,7 +47,6 @@ public class QuestionGenerator : MonoBehaviour
             }
             if (questionNumber == 4)
             {
-                displayingQuestion = true;
                 QuestionDisplay.newQuestion = "How old is the world?";
                 QuestionDisplay.newA = "A. 1400 years";
                 QuestionDisplay.newB = "B. None";
@@ -64,15 +56,26 @@ public class QuestionGenerator : MonoBehaviour
             }
             if (questionNumber == 5)
             {
-                displayingQuestion = true;
                 QuestionDisplay.newQuestion = "Where is Eiffel Tower?";
                 QuestionDisplay.newA = "A. London";
                 QuestionDisplay.newB = "B. Paris";
                 QuestionDisplay.newC = "C. NewYork";
                 QuestionDisplay.newD = "D. New Jersey";
                 actualAnswer = "B";
+            }            
+            if (questionNumber == 6)
+            {
+                QuestionDisplay.newQuestion = "Which is the capital City of Saudi Arabia?";
+                QuestionDisplay.newA = "A. Jaddah";
+                QuestionDisplay.newB = "B. Madina";
+                QuestionDisplay.newC = "C. Makkah";
+                QuestionDisplay.newD = "D. Riyadh";
+                visual001.SetActive(true);
+                actualAnswer = "D";
             }
+            //^^^^^^^^^^^^^^All questions go above this line^^^^^^^^^^^^^^
 
+            QuestionDisplay.update = false;
 
         }
     }

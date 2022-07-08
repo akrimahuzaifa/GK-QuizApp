@@ -17,18 +17,15 @@ public class QuestionDisplay : MonoBehaviour
     public static string newB;
     public static string newC;
     public static string newD;
+    public static bool update = false;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        StartCoroutine(PushTextOnScreen());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!update)
+        {
+            update = true;
+            StartCoroutine(PushTextOnScreen());
+        }
     }
 
     IEnumerator PushTextOnScreen()
@@ -38,6 +35,6 @@ public class QuestionDisplay : MonoBehaviour
         answerABtnText.GetComponent<Text>().text = newA;
         answerBBtnText.GetComponent<Text>().text = newB;
         answerCBtnText.GetComponent<Text>().text = newC;
-        answerDBtnText.GetComponent<Text>().text = newC;
+        answerDBtnText.GetComponent<Text>().text = newD;
     }
 }
