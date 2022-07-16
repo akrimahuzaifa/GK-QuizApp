@@ -1477,6 +1477,7 @@ GameObject:
   - component: {fileID: 685752595}
   - component: {fileID: 685752598}
   - component: {fileID: 685752597}
+  - component: {fileID: 685752599}
   m_Layer: 0
   m_Name: MasterControl
   m_TagString: Untagged
@@ -1566,6 +1567,21 @@ MonoBehaviour:
   bestScore: 0
   bestDisplay: {fileID: 1482749552}
   visual001: {fileID: 645496610}
+--- !u!114 &685752599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685752594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562ab6cd1f4c70144838efbd3af9f76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 1302090849}
+  splashImage: {fileID: 1005095250}
+  splashText: {fileID: 1957061622}
 --- !u!1 &728354156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1751,7 @@ GameObject:
   - component: {fileID: 1005095251}
   - component: {fileID: 1005095253}
   - component: {fileID: 1005095252}
+  - component: {fileID: 1005095254}
   m_Layer: 5
   m_Name: SplashImage
   m_TagString: Untagged
@@ -1796,6 +1813,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005095250}
   m_CullTransparentMesh: 0
+--- !u!95 &1005095254
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005095250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: baded08d35f28e445a24ec79c315a223, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1302090849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,7 +1848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1302090850
 Transform:
   m_ObjectHideFlags: 0
@@ -3292,7 +3328,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Akrima Epic Quiz
+  m_Text: Epic Quiz
 --- !u!222 &1957061626
 CanvasRenderer:
   m_ObjectHideFlags: 0
